@@ -20,6 +20,8 @@ app.use(express.static(staticDir));
 
 app.use(ssr);
 
+app.use(admin)
+
 app
   .listen(PORT)
   .on('error', (error) => {
