@@ -2,12 +2,18 @@ require('dotenv').config();
 require('@babel/register');
 const path = require('path');
 const express = require('express');
+const logger = require('morgan');
+const React = require('react');
+const ReactDOMServer = require('react-dom/server');
+const { Watch } = require('./db/models');
 const db = require('./db/models');
+const Layout = require('./Views/Layout');
 
 const app = express();
 const PORT = 3000;
 
 const ssr = require('./middleware/ssr');
+const HomePage = require('./Views/HomePage');
 // абсолютный путь до папки со статическими файлами
 const staticDir = path.join(__dirname, 'public');
 
@@ -17,8 +23,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // раздать статические файлы — изображения, стили, клиентские скрипты, etc.
 app.use(express.static(staticDir));
-
 app.use(ssr);
+// подключение loggera
+app.use(logger('dev'));
+
+app.get('/', async (req, res) => {
+  const watches = await Watch.findAll();
+  res.renderComponent(HomePage, { watches });
+});
 
 app
   .listen(PORT)
