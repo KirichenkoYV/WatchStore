@@ -6,13 +6,18 @@ function Layout({ children }) {
     <html lang="ru">
       <head>
         <meta charSet="UTF-8" />
-
-        <title></title>
-        <script defer />
       </head>
       <body>
         <header>
-          <Navigation />
+          <div>
+            <nav>
+              <Navigation />
+            </nav>
+            <div className="logo-container">
+              <img className="logo" src="/images/logo.png" alt="logo" />
+              <h1>Watch Store</h1>
+            </div>
+          </div>
         </header>
         <main>{children}</main>
       </body>
