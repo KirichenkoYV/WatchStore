@@ -2,7 +2,9 @@ require('dotenv').config();
 require('@babel/register');
 const path = require('path');
 const express = require('express');
+const logger = require('morgan');
 const db = require('./db/models');
+const indexRouter = require('./routes/index');
 
 const app = express();
 const PORT = 3000;
@@ -17,8 +19,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // раздать статические файлы — изображения, стили, клиентские скрипты, etc.
 app.use(express.static(staticDir));
-
 app.use(ssr);
+// подключение loggera
+app.use(logger('dev'));
+
+app.use('/', indexRouter);
+
 
 app
   .listen(PORT)
