@@ -3,17 +3,13 @@ require('@babel/register');
 const path = require('path');
 const express = require('express');
 const logger = require('morgan');
-const React = require('react');
-const ReactDOMServer = require('react-dom/server');
-const { Watch } = require('./db/models');
 const db = require('./db/models');
-const Layout = require('./Views/Layout');
+const indexRouter = require('./routes/index');
 
 const app = express();
 const PORT = 3000;
 
 const ssr = require('./middleware/ssr');
-const HomePage = require('./Views/HomePage');
 // абсолютный путь до папки со статическими файлами
 const staticDir = path.join(__dirname, 'public');
 
@@ -27,10 +23,8 @@ app.use(ssr);
 // подключение loggera
 app.use(logger('dev'));
 
-app.get('/', async (req, res) => {
-  const watches = await Watch.findAll();
-  res.renderComponent(HomePage, { watches });
-});
+app.use('/', indexRouter);
+
 
 app
   .listen(PORT)

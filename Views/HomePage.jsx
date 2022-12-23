@@ -2,7 +2,6 @@ const React = require('react');
 const Layout = require('./Layout');
 
 module.exports = function HomePage({ watches }) {
-  console.log(watches[0].dataValues.title);
   return (
     <Layout>
       <div
@@ -79,7 +78,7 @@ module.exports = function HomePage({ watches }) {
         нам осуществлять ремонт часов любой сложности, вне зависимости от их
         типа, будь то ремонт механических или кварцевых часов.
       </div>
-      <form>
+      <form className="js-creatOrder" style={{ display: 'block' }}>
         <div>
           Cоздать заказ:
           <input
@@ -87,28 +86,38 @@ module.exports = function HomePage({ watches }) {
             type="text"
             placeholder="Ваше имя"
             aria-label="default input example"
+            name="name"
           />
           <input
             className="emailClient"
             type="text"
             placeholder="Ваша почта"
             aria-label="default input example"
+            name="email"
           />
           <input
             className="phoneClient"
             type="text"
             placeholder="Ваш номер телефона"
             aria-label="default input example"
+            name="phone"
           />
           <input
             className="urlClient"
             type="text"
             placeholder="Ссылка на понравившиеся часы"
             aria-label="default input example"
+            name="url"
           />
-          <button type="button" className="buttonSend">Small button</button>
+          <button type="button" className="buttonSend">
+            Small button
+          </button>
         </div>
       </form>
+      <div className="div" style={{ display: 'none' }}>
+        ваш заказа принят
+      </div>
+      <script src="/order.js" defer />
     </Layout>
   );
 };
