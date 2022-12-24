@@ -4,7 +4,8 @@ const path = require('path');
 const express = require('express');
 const logger = require('morgan');
 const db = require('./db/models');
-const indexRouter = require('./routes/index');
+const indexRouter = require('./routes/indexRouter');
+const adminRouter = require('./Routers/adminRouter');
 
 const app = express();
 const PORT = 3000;
@@ -24,9 +25,7 @@ app.use(ssr);
 app.use(logger('dev'));
 
 app.use('/', indexRouter);
-
-
-app.use(admin)
+app.use('/admin', adminRouter);
 
 app
   .listen(PORT)
