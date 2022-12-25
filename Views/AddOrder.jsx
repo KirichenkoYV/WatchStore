@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 const React = require('react');
-const FormPage = require('./FormPage');
 const Layout = require('./Layout');
 
-module.exports = function HomePage({ watches }) {
+module.exports = function AddOrder({ watches }) {
   return (
     <Layout>
       <div
@@ -80,7 +79,9 @@ module.exports = function HomePage({ watches }) {
         нам осуществлять ремонт часов любой сложности, вне зависимости от их
         типа, будь то ремонт механических или кварцевых часов.
       </div>
-      <FormPage />
+      <div className="div" style={{ display: 'block' }}>
+        ваш заказа принят
+      </div>
       <script src="/order.js" defer />
     </Layout>
   );
