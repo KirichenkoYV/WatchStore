@@ -4,7 +4,22 @@ const Layout = require('./Layout');
 module.exports = function HomePage({ watches }) {
   return (
     <Layout>
-      <div
+      <section className="brand">
+        <div className="brand__content">
+          <div className="brand__info">
+            <h2 className="brand__title">Create your own unique design</h2>
+            <p className="brand__text">
+              An ode to detail-oriented design, crafted around minimalism and
+              preciseness. We make immaculate watches that elevate your look
+              with a statement, be it gold watches, silver watchess or watches
+              in rose gold.
+            </p>
+          </div>
+          <img src="img/item.png" alt="item" className="brand__img" />
+          <img src="img/watchBr.png" alt="watch" className="brand__img-watch" />
+        </div>
+      </section>
+      {/* <div
         id="carouselExampleCaptions"
         className="carousel carousel-dark slide"
         data-bs-ride="false"
@@ -70,14 +85,7 @@ module.exports = function HomePage({ watches }) {
           <span className="carousel-control-next-icon" aria-hidden="true" />
           <span className="visually-hidden">Следующая</span>
         </button>
-      </div>
-      <div>
-        О нас: Мастерская часов Дом Быта.com, предлагает широкий спектр услуг по
-        ремонту, а также обслуживанию часов ведущих отечественных швейцарских,
-        европейских и азиатских марок. Накопленный годами опыт работы, позволяет
-        нам осуществлять ремонт часов любой сложности, вне зависимости от их
-        типа, будь то ремонт механических или кварцевых часов.
-      </div>
+      </div> */}
       <form className="js-creatOrder" style={{ display: 'block' }}>
         <div>
           Cоздать заказ:
