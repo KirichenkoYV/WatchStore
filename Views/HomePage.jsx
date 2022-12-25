@@ -19,7 +19,7 @@ module.exports = function HomePage({ watches }) {
           <img src="img/watchBr.png" alt="watch" className="brand__img-watch" />
         </div>
       </section>
-      {/* <div
+      <div
         id="carouselExampleCaptions"
         className="carousel carousel-dark slide"
         data-bs-ride="false"
@@ -85,8 +85,8 @@ module.exports = function HomePage({ watches }) {
           <span className="carousel-control-next-icon" aria-hidden="true" />
           <span className="visually-hidden">Следующая</span>
         </button>
-      </div> */}
-      <form className="js-creatOrder" style={{ display: 'block' }}>
+      </div>
+      {/* <form className="js-creatOrder" style={{ display: 'block' }}>
         <div>
           Cоздать заказ:
           <input
@@ -124,7 +124,7 @@ module.exports = function HomePage({ watches }) {
       </form>
       <div className="div" style={{ display: 'none' }}>
         ваш заказа принят
-      </div>
+      </div> */}
       <script src="/order.js" defer />
     </Layout>
   );

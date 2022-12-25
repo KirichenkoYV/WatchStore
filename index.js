@@ -25,7 +25,6 @@ app.use(logger('dev'));
 
 app.use('/', indexRouter);
 
-
 app
   .listen(PORT)
   .on('error', (error) => {
