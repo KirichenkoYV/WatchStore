@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js --ext js,jsx,json --ignore sessions"
+    "dev": "nodemon index.js --ext js,jsx,json --ignore sessions",
+    "dbr": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
