@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 require('dotenv').config();
 require('@babel/register');
 const path = require('path');
@@ -10,6 +11,7 @@ const app = express();
 const PORT = 3000;
 
 const ssr = require('./middleware/ssr');
+const getform = require('./routes/getformsRouter');
 // абсолютный путь до папки со статическими файлами
 const staticDir = path.join(__dirname, 'public');
 
@@ -24,6 +26,8 @@ app.use(ssr);
 app.use(logger('dev'));
 
 app.use('/', indexRouter);
+
+app.use('/', getform);
 
 app
   .listen(PORT)

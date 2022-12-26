@@ -1,21 +1,31 @@
-const ReactDOMServer = require('react-dom/server');
-const React = require('react');
-const router = require('express').Router();
+const getform = require('express').Router();
+// const { Order } = require('../db/models');
+const db = require('../db/models');
+const newOrder = require('../Views/AddOrder');
 
-const { Order } = require('../db/models');
+getform.get('/neworder', (req, res) => {
+  res.renderComponent(newOrder);
+});
 
-router.post('/', async (req, res) => {
-  const { name, email, phone, url } = req.body;
+getform.post('/neworder', async (req, res) => {
+  //   const { name } = req.body;
+  const {
+    name, email, phone, url,
+  } = req.body;
   try {
-    const newOrder = await Order.create({
+    const new1Order = await db.Order.create({
       name,
       email,
       phone,
       url,
     });
+    res.locals.user = new1Order;
+    res.redirect('/neworder');
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(error.message);
+    res.sendStatus(500);
   }
 });
 
-module.exports = router;
+module.exports = getform;
