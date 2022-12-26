@@ -5,61 +5,86 @@ function Layout({ children }) {
     <html lang="ru">
       <head>
         <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>InTime store</title>
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossOrigin="anonymous"
         />
+        <link rel="stylesheet" href="style.css" />
+        <script
+          src="https://kit.fontawesome.com/91f59af31d.js"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
-        <header>
-          <ul style={{ listStyleType: 'none' }}>
-            <nav className="navbar bg-light">
-              <div className="container-fluid">
-                <a className="navbar-brand" href="">
-                  <img
-                    src="/docs/5.2/assets/brand/bootstrap-logo.svg"
-                    alt="Logo"
-                    width="30"
-                    height="24"
-                    className="d-inline-block align-text-top"
-                  />
-                  Сайт часов
+        <header className="header">
+          <section className="header__content">
+            <div className="header__logo">
+              <a href="/" className="header__link">
+                <img src="img/logo.png" alt="Logo" className="header__img" />
+                <span className="header__text">InTime</span>
+              </a>
+            </div>
+            <ul className="nav__list">
+              <li className="nav__item">
+                <a href="#About" className="nav__link">
+                  <span className="nav__text">About us</span>
                 </a>
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
-                    Главная
-                  </a>
-                </li>
+              </li>
 
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Примеры работ
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Заказ
-                  </a>
-                </li>
-              </div>
-            </nav>
-          </ul>
+              <li className="nav__item">
+                <a href="#Examples" className="nav__link">
+                  <span className="nav__text">Work examples</span>
+                </a>
+              </li>
+
+              <li className="nav__item">
+                <a href="#" className="nav__link">
+                  <span className="nav__text">Order</span>
+                </a>
+              </li>
+
+              <li className="nav__item">
+                <a href="#Contacts" className="nav__link">
+                  <span className="nav__text">Contacts</span>
+                </a>
+              </li>
+            </ul>
+          </section>
         </header>
-        <main>{children}</main>
-        <footer className="bd-footer py-4 py-md-5 mt-5 bg-light">
-          <div className="container py-4 py-md-5 px-4 px-md-3">
-            <div className="row">
-              <div className="col-lg-3 mb-3">
-                <ul className="list-unstyled small text-muted" />
-              </div>
-              <div className="col-6 col-lg-2 offset-lg-1 mb-3">
-                <h5>Кем разработана</h5>
-                <ul className="list-unstyled" />
-              </div>
-              <div className="col-6 col-lg-2 mb-3">
-                <h5>Контакты</h5>
+        <main className="main">{children}</main>
+        <section className="line">
+          <h2 className="line__title">We work all over the world</h2>
+          <div className="line__container">
+            <p className="line__words">
+              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
+              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
+            </p>
+          </div>
+        </section>
+        <footer className="footer" id="Contacts">
+          <div className="">
+            <div className="">
+              <p className="footer__text">
+                © 1999-2023 Brand All Rights Reserved.
+              </p>
+              <div className="footer__social">
+                <a href="#" className="footer__item">
+                  <i className="footer__icon fa-brands fa-facebook-f" />
+                </a>
+                <a href="#" className="footer__item">
+                  <i className="footer__icon fa-brands fa-instagram" />
+                </a>
+                <a href="#" className="footer__item">
+                  <i className="footer__icon fa-brands fa-pinterest-p" />
+                </a>
+                <a href="#" className="footer__item">
+                  <i className="footer__icon fa-brands fa-twitter" />
+                </a>
               </div>
             </div>
           </div>

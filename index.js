@@ -26,6 +26,7 @@ app.use(ssr);
 app.use(logger('dev'));
 
 app.use('/', indexRouter);
+
 app.use('/', getform);
 
 app
