@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 function RegistrationPage() {
   return (
     <Layout>
-      <form method="POST" action="/admin">
+      <form className='bg-secondary' method="POST" action="/admin">
         <label htmlFor="loginInput">Login</label>
         <input name="login" id="loginInput" type="text" required />
 
@@ -15,7 +15,7 @@ function RegistrationPage() {
           Зарегистрироваться
         </button>
       </form>
-    </Layout>
+    // </Layout>
   );
 }
 
