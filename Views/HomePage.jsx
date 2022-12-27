@@ -43,7 +43,7 @@ module.exports = function HomePage({ watches }) {
         </div>
       </section>
       <section className="my-slider" id="Examples">
-        <h2 className="my-slider__title">Our clients</h2>
+        <h2 className="my-slider__title">Sensuality and style</h2>
         <div
           id="carouselExampleDark"
           className="carousel carousel-dark slide"
