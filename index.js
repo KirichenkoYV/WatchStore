@@ -6,6 +6,7 @@ const express = require('express');
 const logger = require('morgan');
 const db = require('./db/models');
 const indexRouter = require('./routes/index');
+const regAdmin = require('./routes/regAdmin');
 
 const app = express();
 const PORT = 3000;
@@ -27,7 +28,11 @@ app.use(logger('dev'));
 
 app.use('/', indexRouter);
 
+app.use('/admin', regAdmin);
+
+
 app.use('/', getform);
+
 
 app
   .listen(PORT)
