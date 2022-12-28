@@ -18,7 +18,6 @@ getform.post('/neworder', async (req, res) => {
       phone,
       url,
     });
-    console.log(req.body.email);
     const message = {
       from: 'Mailer Test <hause_ru@mail.ru>',
       to: req.body.email,

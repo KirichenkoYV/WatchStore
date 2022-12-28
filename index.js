@@ -30,9 +30,7 @@ app.use('/', indexRouter);
 
 app.use('/admin', regAdmin);
 
-
 app.use('/', getform);
-
 
 app
   .listen(PORT)

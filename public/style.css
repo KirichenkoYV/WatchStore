@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ ul {
 }
 
 body {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   cursor: default;
 }
 
@@ -115,7 +115,8 @@ body {
 .brand__flex {
   flex-direction: column;
 }
-.brand__first, .brand__second {
+.brand__first,
+.brand__second {
   max-width: 1300px;
   display: flex;
   align-items: center;
@@ -212,10 +213,10 @@ body {
   color: #222224;
   white-space: nowrap;
   -webkit-animation: marquee 60s infinite linear;
-          animation: marquee 60s infinite linear;
+  animation: marquee 60s infinite linear;
 }
 .line__words:after {
-  content: " LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME";
+  content: ' LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME';
 }
 
 @-webkit-keyframes marquee {
@@ -308,4 +309,6 @@ body {
 .order__content {
   height: 50vh;
   width: 50vw;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
+

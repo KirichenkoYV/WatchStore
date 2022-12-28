@@ -1,7 +1,7 @@
 const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class Catalog extends Model {
     // eslint-disable-next-line no-unused-vars
     static associate(models) {}
   }
@@ -12,13 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    login: {
+    titleWatch: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    password: {
-      type: DataTypes.TEXT,
+    urlWatch: {
       allowNull: false,
+      type: DataTypes.TEXT,
     },
     createdAt: {
       allowNull: false,
@@ -29,13 +29,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
     },
   };
-
   const options = {
     sequelize,
-    modelName: 'User',
-    tableName: 'Users',
+    modelName: 'Catalog',
+    tableName: 'Catalogs',
   };
-
-  User.init(attributes, options);
-  return User;
+  Catalog.init(attributes, options);
+  return Catalog;
 };
