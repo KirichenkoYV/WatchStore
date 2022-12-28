@@ -6,8 +6,6 @@ module.exports = {
       { title: 'Макет часов 1', note: 'Кварцевые часы. Водостойкость WR 30.', imagePath: 'https://www.bestwatch.ru/bigimage/Sturmanskie/9015-1271570.jpg' },
       { title: 'Макет часов 2', note: 'Механические часы с автоподзаводом. Запас хода 48 часов.', imagePath: 'https://www.bestwatch.ru/bigimage/Obaku/V267GXCBMC.jpg' },
       { title: 'Макет часов 3', note: 'Мужские механические часы с автоподзаводом. Циферблат черного и серого цвета со светящимися часовыми метками и арабскими цифрами.', imagePath: 'https://www.bestwatch.ru/bigimage/seiko/SRPD07J1.jpg' },
-      { title: 'Макет часов 4', note: 'Механические часы с автоподзаводом. Водостойкость WR 30. Часы, минуты. Турбийон. ', imagePath: 'https://www.bestwatch.ru/bigimage/Earnshaw/ES-8006-07.jpg' },
-      { title: 'Макет часов 5', note: 'Механические часы с ручным заводом.Сапфировое стекло. Прозрачная задняя крышка.', imagePath: 'https://www.bestwatch.ru/bigimage/Storm/47488-GD.jpg' },
     ];
     return queryInterface.bulkInsert(
       'Watches',
