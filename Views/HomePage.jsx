@@ -3,7 +3,7 @@ const React = require('react');
 const FormPage = require('./FormPage');
 const Layout = require('./Layout');
 
-module.exports = function HomePage({ watches }) {
+module.exports = function HomePage({ watches, watchesCatalog }) {
   return (
     <Layout>
       <section className="brand" id="About">
@@ -112,6 +112,17 @@ module.exports = function HomePage({ watches }) {
           MORE WORKS
         </button>
       </section>
+      <div>
+        {watchesCatalog.map((el) => (
+          <div id="catalog" key={el.id}>
+            <div className="card-watches" />
+            <img src={el.urlWatch} />
+            <div>
+              <h5>{el.titleWatch}</h5>
+            </div>
+          </div>
+        ))}
+      </div>
       <FormPage />
       <script src="/order.js" defer />
     </Layout>

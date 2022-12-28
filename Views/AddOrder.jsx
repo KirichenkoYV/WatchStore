@@ -6,7 +6,7 @@ module.exports = function AddOrder({ watches }) {
   return (
     <Layout>
       <div className="div" style={{ display: 'block' }}>
-        ваш заказа принят
+        Ваш заказа принят
       </div>
       <script src="/order.js" defer />
     </Layout>
