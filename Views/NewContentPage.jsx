@@ -4,7 +4,11 @@ const Layout = require('./Layout');
 function NewContentPage() {
   return (
     <Layout>
-      <form method="POST" action="admin/add-new-content" className="js-add-watch">
+      <form
+        method="POST"
+        action="/admin/add-new-content"
+        className="js-add-watch"
+      >
         <label htmlFor="titleInput">Название часов</label>
         <br />
         <input name="title" id="titleInput" placeholder="Название часов" />
@@ -21,7 +25,9 @@ function NewContentPage() {
           rows="7"
         />
         <br />
-
+        <input type="file" id="ImagePathInput" name="imagePath" multiple />
+        <br />
+        <br />
         <button type="submit">Отправить</button>
       </form>
     </Layout>
