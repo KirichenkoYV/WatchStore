@@ -70,7 +70,8 @@ router.post('/add-new-content', async (req, res) => {
 
 router.post('/remove-watch', async (req, res) => {
   await Watch.destroy({ where: { id: Number(req.body.id) } });
-  res.redirect('/admin');
+  // res.redirect('/admin');
+  res.json({ success: true });
 });
 
 module.exports = router;

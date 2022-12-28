@@ -12,17 +12,16 @@ function WatchList({ watchList }) {
       <ol className="js-watches">
         {watchList.map((watch) => (
           <li key={watch}>
-            <div className="watch">
+            <div className="watch" data-id={watch.id}>
               <img src={watch.dataValues.imagePath} alt={watch.dataValues.id} />
               <div>
                 <h6>{watch.dataValues.title}</h6>
                 <p>{watch.dataValues.note}</p>
               </div>
               <div className="watch-button">
-                <form action="/admin/remove-watch" method="POST">
-                  <input name="id" value={watch.id} hidden/>
-                  <button type="submit">Удалить</button>
-                </form>
+                <button type="button" className="remove-watch">
+                  Удалить
+                </button>
               </div>
             </div>
           </li>
