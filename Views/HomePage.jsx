@@ -108,9 +108,6 @@ module.exports = function HomePage({ watches }) {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-        <button type="button" className="my-slider__bnt">
-          MORE WORKS
-        </button>
       </section>
       <FormPage />
       <script src="/order.js" defer />

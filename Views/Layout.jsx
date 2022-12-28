@@ -43,7 +43,7 @@ function Layout({ children }) {
               </li>
 
               <li className="nav__item">
-                <a href="#" className="nav__link">
+                <a href="#Order" className="nav__link">
                   <span className="nav__text">Order</span>
                 </a>
               </li>
@@ -73,16 +73,16 @@ function Layout({ children }) {
                 © 1999-2023 Brand All Rights Reserved.
               </p>
               <div className="footer__social">
-                <a href="#" className="footer__item">
+                <a href="/" className="footer__item">
                   <i className="footer__icon fa-brands fa-facebook-f" />
                 </a>
-                <a href="#" className="footer__item">
+                <a href="/" className="footer__item">
                   <i className="footer__icon fa-brands fa-instagram" />
                 </a>
-                <a href="#" className="footer__item">
+                <a href="/" className="footer__item">
                   <i className="footer__icon fa-brands fa-pinterest-p" />
                 </a>
-                <a href="#" className="footer__item">
+                <a href="/" className="footer__item">
                   <i className="footer__icon fa-brands fa-twitter" />
                 </a>
               </div>
