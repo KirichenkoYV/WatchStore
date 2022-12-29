@@ -7,6 +7,7 @@ const logger = require('morgan');
 const db = require('./db/models');
 const indexRouter = require('./routes/index');
 const regAdmin = require('./routes/regAdmin');
+const cabinet = require('./routes/cabinetAdmin');
 
 const app = express();
 const PORT = 3000;
@@ -31,6 +32,7 @@ app.use('/', indexRouter);
 app.use('/admin', regAdmin);
 
 app.use('/', getform);
+app.use('/', cabinet);
 
 app
   .listen(PORT)

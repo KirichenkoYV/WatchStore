@@ -17,12 +17,16 @@ module.exports = {
         allowNull: false,
       },
       phone: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TEXT,
         allowNull: false,
       },
       url: {
         type: Sequelize.TEXT,
         allowNull: false,
+      },
+      status: {
+        allowNull: true,
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,
