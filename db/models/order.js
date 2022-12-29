@@ -21,12 +21,16 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     url: {
       type: DataTypes.TEXT,
       allowNull: false,
+    },
+    status: {
+      allowNull: true,
+      type: DataTypes.TEXT,
     },
     createdAt: {
       allowNull: false,

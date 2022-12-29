@@ -2,7 +2,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function AddOrder({ watches }) {
+module.exports = function AddOrder({}) {
   return (
     <Layout>
       <div className="div" style={{ display: 'block' }}>

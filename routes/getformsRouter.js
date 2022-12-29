@@ -19,7 +19,7 @@ getform.post('/neworder', async (req, res) => {
       url,
     });
     const message = {
-      from: 'Mailer Test <hause_ru@mail.ru>',
+      from: 'InTime <hause_ru@mail.ru>',
       to: req.body.email,
       subject: 'Ваш заказ принят',
       text: 'Поздравляем! Вы успешно оставили заказ на уникальные часы ручной работы! В ближайшее время с Вами свяжется наш менеджер, для уточнения деталей. Данное письмо не требует ответа.',
