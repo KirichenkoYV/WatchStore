@@ -2,37 +2,32 @@ const React = require('react');
 
 module.exports = function FormPage() {
   return (
-    <form
-      method="POST"
-      action="/neworder"
-      className="js-creatOrder"
-      style={{ display: 'block' }}
-    >
-      <div>
+    <div className="order" id="Order">
+      <form method="POST" action="/neworder" className="order__content">
         Cоздать заказ:
         <input
-          className="nameClient"
+          className="nameClient form-control"
           type="text"
           placeholder="Ваше имя"
           name="name"
           required
         />
         <input
-          className="emailClient"
+          className="emailClient form-control"
           type="text"
           placeholder="Ваша почта"
           name="email"
           required
         />
         <input
-          className="phoneClient"
+          className="phoneClient form-control"
           type="text"
           placeholder="Ваш номер телефона"
           name="phone"
           required
         />
         <input
-          className="urlClient"
+          className="urlClient form-control"
           type="text"
           placeholder="Ссылка на понравившиеся часы"
           name="url"
@@ -43,7 +38,7 @@ module.exports = function FormPage() {
             Small button
           </button>
         </a>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
