@@ -57,21 +57,10 @@ function Layout({ children }) {
           </section>
         </header>
         <main className="main">{children}</main>
-        <section className="line">
-          <h2 className="line__title">We work all over the world</h2>
-          <div className="line__container">
-            <p className="line__words">
-              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
-              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
-            </p>
-          </div>
-        </section>
         <footer className="footer" id="Contacts">
           <div className="">
             <div className="">
-              <p className="footer__text">
-                © 1999-2023 Brand All Rights Reserved.
-              </p>
+              <p className="footer__text">© 2023 Brand All Rights Reserved.</p>
               <div className="footer__social">
                 <a href="/" className="footer__item">
                   <i className="footer__icon fa-brands fa-facebook-f" />
@@ -94,6 +83,7 @@ function Layout({ children }) {
           integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
           crossOrigin="anonymous"
         />
+        <script src="/order.js" defer />
       </body>
     </html>
   );

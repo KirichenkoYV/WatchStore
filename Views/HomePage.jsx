@@ -6,16 +6,18 @@ const Layout = require('./Layout');
 module.exports = function HomePage({ watches, watchesCatalog }) {
   return (
     <Layout>
-      <section className="brand" id="About">
+      <div className="brand" id="About">
         <div className="brand__flex">
           <div className="brand__first">
             <div className="brand__info">
               <h2 className="brand__title">Create your own unique design</h2>
               <p className="brand__text">
-                An ode to detail-oriented design, crafted around minimalism and
-                preciseness. We make immaculate watches that elevate your look
-                with a statement, be it gold watches, silver watchess or watches
-                in rose gold.
+                The watch workshop InTime was founded in 2021. We love it when
+                everything is done on time, so we believe that everyone needs a
+                watch. We focus on detail-oriented design based on minimalism
+                and precision. Whether it's gold watches, silver watches or rose
+                gold watches, we produce flawless timepieces that will enhance
+                your image.
               </p>
             </div>
             <img src="img/item.png" alt="item" className="brand__img" />
@@ -29,20 +31,19 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
             <img src="img/item1.png" alt="woman" className="brand__img-woman" />
             <img src="img/detail.png" alt="" className="brand__img-detail" />
             <div className="brand__info">
-              <h2 className="brand__title">
-                Reliable and transparent material
-              </h2>
+              <h2 className="brand__title">Reliable and durable material</h2>
               <p className="brand__text">
-                An ode to detail-oriented design, crafted around minimalism and
-                preciseness. We make immaculate watches that elevate your look
-                with a statement, be it gold watches, silver watchess or watches
-                in rose gold.
+                All of our watch faces are designed with timeless material and
+                versatility in mind, and are easy to pair with a variety of
+                interchangeable straps. Whether you're attending a formal event,
+                or enjoying a sunny day at the beach club, our watches are the
+                perfect companion for any occasion or setting.
               </p>
             </div>
           </div>
         </div>
-      </section>
-      <section className="my-slider" id="Examples">
+      </div>
+      <div className="my-slider" id="Examples">
         <h2 className="my-slider__title">Sensuality and style</h2>
         <div
           id="carouselExampleDark"
@@ -108,20 +109,26 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-      </section>
-      <div>
+        <br />
+      </div>
+      <div className="catalog row">
         {watchesCatalog.map((el) => (
-          <div id="catalog" key={el.id}>
-            <div className="card-watches" />
-            <img src={el.urlWatch} />
-            <div>
-              <h5>{el.titleWatch}</h5>
-            </div>
+          <div className="card catalog__card" key={el.id}>
+            <img src={el.urlWatch} className="catalog__img" />
+            <h5 className="catalog__title">{el.titleWatch}</h5>
           </div>
         ))}
       </div>
       <FormPage />
-      <script src="/order.js" defer />
+      <div className="line">
+        <h2 className="line__title">We work all over the world</h2>
+        <div className="line__container">
+          <p className="line__words">
+            LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME - LONDON
+            - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
+          </p>
+        </div>
+      </div>
     </Layout>
   );
 };

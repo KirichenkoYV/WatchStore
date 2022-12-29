@@ -2,46 +2,49 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     const catalogWatches = [
       {
-        titleWatch: 'CORUM ADMIRAL LEGEND CHRONOGRAPH A984/02193',
+        titleWatch: 'Corum Admiral',
         urlWatch:
-          'https://316.watch/upload/iblock/fe3/ksevqh9s4djhh0smfty63iopvf82pg2w.jpg',
+          'https://www.alltime.ru/obj/catalog/watch/daniel-wellington/img/big/DW00100474.jpg',
       },
       {
-        titleWatch: 'SEIKO PROSPEX SRPE29K1S',
+        titleWatch: 'Iconic Link',
         urlWatch:
-          'https://316.watch/upload/iblock/901/bvui634m2paoijqiqslw99z925p0qllq.png',
+          'https://www.alltime.ru/obj/catalog/watch/daniel-wellington/img/big/DW00100208.jpg',
       },
       {
-        titleWatch: 'RAYMOND WEIL TANGO 8570-ST2-05207',
+        titleWatch: 'Raymond Weil',
         urlWatch:
           'https://316.watch/upload/iblock/7f2/5yiq9narttmnvrlzbotxsi60jpug8mib.jpg',
       },
       {
-        titleWatch: 'BVLGARI OCTO ROMA',
+        titleWatch: 'BVLGARI Octo Roma',
         urlWatch:
           'https://316.watch/upload/iblock/fcb/oe0nc4e3p871lnsiv9jkz11xr1smy6dj.png',
       },
       {
-        titleWatch: 'Ball DM2118B-SCJ-BK',
+        titleWatch: 'For Owls',
         urlWatch:
-          'https://316.watch/upload/iblock/413/4131da30d3fc6e365e72bf387621b2fd.jpg',
+          'https://avatars.mds.yandex.net/get-mpic/5031495/img_id7570608703599835921.jpeg/orig',
       },
       {
-        titleWatch: 'Zenith PILOT TYPE 20',
+        titleWatch: 'Petite Ashfield',
         urlWatch:
-          'https://316.watch/upload/iblock/692/ixnfjtrq2sd372mniqstjubahxxo0ac2.jpg',
+          'https://www.alltime.ru/obj/catalog/watch/daniel-wellington/img/big/DW00100245.jpg',
       },
       {
-        titleWatch: 'Guess GW0282G1',
-        urlWatch: 'https://photo.watches.ru/123855/57541-n.jpg?ts=1613916155',
+        titleWatch: 'For Yura',
+        urlWatch:
+          'https://www.alltime.ru/obj/catalog/watch/armin-strom/img/big/RG17-RF-90-AL-L-40.jpg',
       },
       {
-        titleWatch: 'Guess GW0058G4',
-        urlWatch: 'https://photo.watches.ru/123746/57517-n.jpg?ts=1613916125',
+        titleWatch: 'For Edik',
+        urlWatch:
+          'https://www.alltime.ru/obj/catalog/watch/doodle/img/big/DO32009.jpg',
       },
       {
-        titleWatch: 'Tommy Hilfiger 1791905',
-        urlWatch: 'https://photo.watches.ru/127876/62233-n.jpg?ts=1631419586',
+        titleWatch: 'For Lena',
+        urlWatch:
+          'https://www.alltime.ru/obj/catalog/watch/doodle/img/big/DO32014.jpg',
       },
     ];
     return queryInterface.bulkInsert(

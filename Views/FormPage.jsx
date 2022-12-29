@@ -2,7 +2,7 @@ const React = require('react');
 
 module.exports = function FormPage() {
   return (
-    <section className="order" id="Order">
+    <div className="order" id="Order">
       <form method="POST" action="/neworder" className="order__content">
         Cоздать заказ:
         <input
@@ -39,6 +39,6 @@ module.exports = function FormPage() {
           </button>
         </a>
       </form>
-    </section>
+    </div>
   );
 };
