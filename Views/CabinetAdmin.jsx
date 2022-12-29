@@ -5,6 +5,16 @@ const Layout = require('./Layout');
 module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
   return (
     <Layout>
+      <header className="header">
+        <section className="header__content">
+          <div className="header__logo">
+            <a href="/" className="header__link">
+              <img src="img/logo.png" alt="Logo" className="header__img" />
+              <span className="header__text">InTime</span>
+            </a>
+          </div>
+        </section>
+      </header>
       <div>
         <h2>Таблица заказов:</h2>
         <table className="table">
