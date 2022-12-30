@@ -63,6 +63,10 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
                 className="brand__img-watch"
               />
             </div>
+            <div className="wrapper">
+              <div className="parallax-img" />
+            </div>
+            <div />
             <div className="brand__second">
               <img
                 src="img/item1.png"
@@ -160,6 +164,9 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
           ))}
         </div>
         <FormPage />
+        <div className="wrapper">
+          <div className="parallax-img__world" />
+        </div>
         <div className="line">
           <h2 className="line__title">We work all over the world</h2>
           <div className="line__container">

@@ -8,28 +8,28 @@ module.exports = function FormPage() {
         <input
           className="nameClient form-control"
           type="text"
-          placeholder="Ваше имя"
+          placeholder="Your name"
           name="name"
           required
         />
         <input
           className="emailClient form-control"
           type="text"
-          placeholder="Ваша почта"
+          placeholder="Email"
           name="email"
           required
         />
         <input
           className="phoneClient form-control"
           type="text"
-          placeholder="Ваш номер телефона"
+          placeholder="Phone"
           name="phone"
           required
         />
         <input
           className="urlClient form-control"
           type="text"
-          placeholder="Ссылка на понравившиеся часы"
+          placeholder="Link to favorite watch"
           name="url"
           required
         />

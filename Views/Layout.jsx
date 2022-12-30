@@ -20,9 +20,7 @@ function Layout({ children }) {
           crossOrigin="anonymous"
         />
       </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
