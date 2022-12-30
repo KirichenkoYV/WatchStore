@@ -52,8 +52,7 @@ router.post('/', async (req, res) => {
     return;
   }
 
-  // res.redirect('/'); // здесь нужно сделать редирект на страницу админа
-  res.send('Вы успешно вошли, как администратор'); // заглушка, что админ ввел правильный пароль
+  res.redirect('/cabinetAdmin');
 });
 
 module.exports = router;
