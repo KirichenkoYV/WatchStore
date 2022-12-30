@@ -75,7 +75,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
             </tbody>
           </table>
           <div className="" id="Order">
-            <form method="POST" className="">
+            <form method="POST" className="" action="cabinetCarousel">
               Изменить карусель:
               <input
                 className="nameClient form-control"

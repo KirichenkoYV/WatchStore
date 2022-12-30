@@ -10,7 +10,7 @@ cabinetAdmin.get('/cabinetAdmin', async (req, res) => {
 });
 
 // eslint-disable-next-line consistent-return
-cabinetAdmin.post('/cabinetAdmin', async (req, res) => {
+cabinetAdmin.post('/cabinetCarousel', async (req, res) => {
   const { title, note, imagePath } = req.body;
   try {
     const new1Order = await Watch.create({
@@ -19,7 +19,7 @@ cabinetAdmin.post('/cabinetAdmin', async (req, res) => {
       imagePath,
     });
     new1Order.save();
-    return res.redirect('/cabinetAdmin');
+    res.redirect('/cabinetAdmin');
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error(error.message);

@@ -7,7 +7,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
   return (
     <Layout>
       <header className="header">
-        <section className="header__content">
+        <section className="header__content container">
           <div className="header__logo">
             <a href="/" className="header__link">
               <img src="img/logo.png" alt="Logo" className="header__img" />
@@ -44,7 +44,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
       <main className="main">
         <div className="brand" id="About">
           <div className="brand__flex">
-            <div className="brand__first">
+            <div className="brand__first container">
               <div className="brand__info">
                 <h2 className="brand__title">Create your own unique design</h2>
                 <p className="brand__text">
@@ -67,7 +67,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
               <div className="parallax-img" />
             </div>
             <div />
-            <div className="brand__second">
+            <div className="brand__second container">
               <img
                 src="img/item1.png"
                 alt="woman"
