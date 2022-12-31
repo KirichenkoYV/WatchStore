@@ -32,7 +32,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
             </thead>
             <tbody>
               {orders.map((el, i) => (
-                <tr>
+                <tr key={el.id}>
                   <th scope="row">{i + 1}</th>
                   <td>{el.dataValues.name}</td>
                   <td>{el.dataValues.email}</td>
@@ -60,7 +60,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
             </thead>
             <tbody>
               {carousel.map((el, i) => (
-                <tr>
+                <tr key={el.id}>
                   <th scope="row">{i + 1}</th>
                   <td>{el.dataValues.title}</td>
                   <td>{el.dataValues.note}</td>
@@ -117,7 +117,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
             </thead>
             <tbody>
               {catalog.map((el, i) => (
-                <tr>
+                <tr key={el.id}>
                   <th scope="row">{i + 1}</th>
                   <td>{el.dataValues.titleWatch}</td>
                   <td>{el.dataValues.urlWatch}</td>
