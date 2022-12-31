@@ -11,6 +11,7 @@ function Layout({ children }) {
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossOrigin="anonymous"
         />
+        <script src="/client.js" defer />
       </head>
       <body>
         <header>
@@ -28,18 +29,18 @@ function Layout({ children }) {
                   Сайт часов
                 </a>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <a className="nav-link active" aria-current="page" href="/">
                     Главная
                   </a>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/">
                     Примеры работ
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/">
                     Заказ
                   </a>
                 </li>
