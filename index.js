@@ -1,11 +1,12 @@
+/* eslint-disable no-console */
 require('dotenv').config();
 require('@babel/register');
 const path = require('path');
 const express = require('express');
 const logger = require('morgan');
 const db = require('./db/models');
-const indexRouter = require('./routes/indexRouter');
-const adminRouter = require('./Routers/adminRouter');
+const indexRouter = require('./routes/pages/indexRouter');
+const adminRouter = require('./routes/pages/adminRouter');
 
 const app = express();
 const PORT = 3000;
