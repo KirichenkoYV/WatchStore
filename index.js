@@ -1,39 +1,31 @@
 /* eslint-disable no-console */
 require('dotenv').config();
 require('@babel/register');
-const path = require('path');
+
 const express = require('express');
-const logger = require('morgan');
+const path = require('path');
 const db = require('./db/models');
 const indexRouter = require('./routes/index');
 const regAdmin = require('./routes/regAdmin');
 const cabinet = require('./routes/cabinetAdmin');
-
-const app = express();
-const PORT = 3000;
-
-const ssr = require('./middleware/ssr');
+const config = require('./config/config');
 const getform = require('./routes/getformsRouter');
 // абсолютный путь до папки со статическими файлами
 const staticDir = path.join(__dirname, 'public');
-
-// прочесть тело запросов в формате urlencoded -> req.body
-app.use(express.urlencoded({ extended: true }));
-// прочесть тело запросов в формате JSON -> req.body
-app.use(express.json());
 // раздать статические файлы — изображения, стили, клиентские скрипты, etc.
+
+const app = express();
+const PORT = 3000;
+config(app);
+
+// обработчики запросов
 app.use(express.static(staticDir));
-app.use(ssr);
-// подключение loggera
-app.use(logger('dev'));
-
 app.use('/', indexRouter);
-
 app.use('/admin', regAdmin);
-
 app.use('/', getform);
 app.use('/', cabinet);
 
+// слушатель порта
 app
   .listen(PORT)
   .on('error', (error) => {

@@ -121,6 +121,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
                 <div
                   className={`carousel-item ${i === 0 ? 'active' : ''}`}
                   data-bs-interval="8000"
+                  key={el.id}
                 >
                   <img
                     src={el.dataValues.imagePath}
