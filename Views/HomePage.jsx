@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 const React = require('react');
-// const $ = require('jquery');
 const FormPage = require('./FormPage');
 const Layout = require('./Layout');
-require('jquery.marquee');
 
 module.exports = function HomePage({ watches, watchesCatalog }) {
   return (
@@ -178,14 +176,6 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
               LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
             </p>
           </div>
-          <div
-            className="marquee"
-            data-duration="5000"
-            data-gap="10"
-            data-duplicated="true"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit END.
-          </div>
         </div>
       </main>
       <footer className="footer" id="Contacts">
@@ -221,11 +211,6 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
         crossOrigin="anonymous"
       />
       <script src="/order.js" defer />
-      <script
-        src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"
-        type="text
-/javascript"
-      />
     </Layout>
   );
 };
