@@ -15,6 +15,7 @@ a {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 body {
@@ -456,6 +457,12 @@ body {
 .footer {
   background-color: $colorDark;
   height: 280px;
+  color: #ffffff;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__text {
     color: #ffffff;
@@ -469,11 +476,11 @@ body {
     border-radius: 2px;
     border: 1px solid transparent;
     background-color: #ffffff;
-    width: 32px;
-    height: 32px;
-    color: $colorDark;
-    font-size: 16px;
-    line-height: 32px;
+    width: 40px;
+    height: 40px;
+    color: #222224;
+    font-size: 20px;
+    line-height: 38px;
     font-weight: 500;
     text-align: center;
     transition: color 1s;
@@ -498,4 +505,10 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 1300px;
+}
+
+.marquee {
+  width: 300px; /* the plugin works for responsive layouts so width is not necessary */
+  overflow: hidden;
+  border: 1px solid #ccc;
 }

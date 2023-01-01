@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 const React = require('react');
+// const $ = require('jquery');
 const FormPage = require('./FormPage');
 const Layout = require('./Layout');
+require('jquery.marquee');
 
 module.exports = function HomePage({ watches, watchesCatalog }) {
   return (
@@ -51,9 +53,9 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
                   The watch workshop InTime was founded in 2021. We love it when
                   everything is done on time, so we believe that everyone needs
                   a watch. We focus on detail-oriented design based on
-                  minimalism and precision. Whether it's gold watches, silver
-                  watches or rose gold watches, we produce flawless timepieces
-                  that will enhance your image.
+                  minimalism and precision. Whether it&apos;s gold watches,
+                  silver watches or rose gold watches, we produce flawless
+                  timepieces that will enhance your image.
                 </p>
               </div>
               <img src="img/item.png" alt="item" className="brand__img" />
@@ -176,11 +178,25 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
               LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
             </p>
           </div>
+          <div
+            className="marquee"
+            data-duration="5000"
+            data-gap="10"
+            data-duplicated="true"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit END.
+          </div>
         </div>
       </main>
       <footer className="footer" id="Contacts">
-        <div className="">
+        <div className="container">
           <div className="">
+            <ul>
+              <li>Guarantee</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+          <div className="footer__flex">
             <p className="footer__text">© 2023 Brand All Rights Reserved.</p>
             <div className="footer__social">
               <a href="/" className="footer__item">
@@ -205,6 +221,11 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
         crossOrigin="anonymous"
       />
       <script src="/order.js" defer />
+      <script
+        src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"
+        type="text
+/javascript"
+      />
     </Layout>
   );
 };
