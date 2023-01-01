@@ -87,7 +87,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
             </div>
           </div>
         </div>
-        <div className="my-slider" id="Examples">
+        <div className="my-slider container" id="Examples">
           <h2 className="my-slider__title">Sensuality and style</h2>
           <div
             id="carouselExampleDark"
@@ -155,7 +155,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
           </div>
           <br />
         </div>
-        <div className="catalog row">
+        <div className="catalog row container">
           {watchesCatalog.map((el) => (
             <div className="card catalog__card" key={el.id}>
               <img src={el.urlWatch} className="catalog__img" />
