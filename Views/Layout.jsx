@@ -20,6 +20,7 @@ function Layout({ children }) {
           crossOrigin="anonymous"
         />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="reset.css" />
         <script
           src="https://kit.fontawesome.com/91f59af31d.js"
           crossOrigin="anonymous"

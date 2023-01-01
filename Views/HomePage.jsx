@@ -172,17 +172,16 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
           <h2 className="line__title">We work all over the world</h2>
           <div className="line__container">
             <p className="line__words">
-              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
-              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
+              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME
             </p>
           </div>
         </div>
       </main>
       <footer className="footer" id="Contacts">
         <div className="container">
-          <div className="">
+          <div className="footer__content">
             <ul>
-              <li>Guarantee</li>
+              <li className="footer__guarantee">Guarantee</li>
               <li>FAQ</li>
             </ul>
           </div>

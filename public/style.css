@@ -1,21 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  cursor: default;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
 body {
   font-family: "IBM Plex Mono", monospace;
   cursor: default;
@@ -329,28 +313,25 @@ body {
   padding: 24px 0;
   color: #222224;
   white-space: nowrap;
-  -webkit-animation: marquee 60s infinite linear;
-          animation: marquee 60s infinite linear;
-}
-.line__words:after {
-  content: " LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME";
+  -webkit-animation: move 25s linear infinite alternate;
+          animation: move 25s linear infinite alternate;
 }
 
-@-webkit-keyframes marquee {
+@-webkit-keyframes move {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-40%);
   }
 }
 
-@keyframes marquee {
+@keyframes move {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-40%);
   }
 }
 .footer {
