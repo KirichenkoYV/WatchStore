@@ -514,6 +514,10 @@ body {
     margin: 15px;
     padding: 12px;
   }
+
+  &__rega{
+    margin-top: 70px;
+  }
 }
 
 .table {
@@ -556,6 +560,7 @@ body {
     animation-timing-function: ease-out;
   }
 }
+
 @keyframes heartbeat {
   from {
     -webkit-transform: scale(1);

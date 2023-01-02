@@ -422,6 +422,9 @@ body {
   margin: 15px;
   padding: 12px;
 }
+.admin__rega {
+  margin-top: 70px;
+}
 
 .table {
   margin-bottom: 30px;
