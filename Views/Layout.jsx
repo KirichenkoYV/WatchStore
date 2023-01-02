@@ -18,7 +18,9 @@ function Layout({ children }) {
         <script
           src="https://kit.fontawesome.com/91f59af31d.js"
           crossOrigin="anonymous"
+          defer
         />
+        <script src="/application.js" defer />
       </head>
       <body>{children}</body>
     </html>

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 const React = require('react');
 const Layout = require('./Layout');
+const CarouselAdmin = require('./CarouselAdmin');
 
 module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
   return (
@@ -58,24 +59,19 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                 <th scope="col"> </th>
               </tr>
             </thead>
-            <tbody>
-              {carousel.map((el, i) => (
-                <tr key={el.id}>
-                  <th scope="row">{i + 1}</th>
-                  <td>{el.dataValues.title}</td>
-                  <td>{el.dataValues.note}</td>
-                  <td>{el.dataValues.imagePath}</td>
-                  <td>
-                    <button type="button">
-                      <img src="img/x.svg" alt="delete" />
-                    </button>
-                  </td>
-                </tr>
+            <tbody className="tableCarousel">
+              {carousel.map((el, i = 0) => (
+                <CarouselAdmin el={el} i={i} />
               ))}
             </tbody>
           </table>
           <div className="" id="Order">
-            <form method="POST" className="">
+            <form
+              method="POST"
+              className=""
+              id="changeCarousel"
+              action="/cabinetAdmin"
+            >
               Изменить карусель:
               <input
                 className="nameClient form-control"
@@ -131,7 +127,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
             </tbody>
           </table>
           <div className="" id="Order1">
-            <form method="POST" className="">
+            <form method="POST" className="" action="/cabinet">
               Изменить каталог:
               <input
                 className="nameClient form-control"
