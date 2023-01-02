@@ -7,7 +7,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
   return (
     <Layout>
       <header className="header">
-        <section className="header__content container">
+        <div className="header__content container">
           <div className="header__logo">
             <a href="/" className="header__link">
               <img src="img/logo.png" alt="Logo" className="header__img" />
@@ -39,7 +39,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
               </a>
             </li>
           </ul>
-        </section>
+        </div>
       </header>
       <main className="main">
         <div className="brand" id="About">
@@ -79,7 +79,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
                 <p className="brand__text">
                   All of our watch faces are designed with timeless material and
                   versatility in mind, and are easy to pair with a variety of
-                  interchangeable straps. Whether you're attending a formal
+                  interchangeable straps. Whether you&apos;re attending a formal
                   event, or enjoying a sunny day at the beach club, our watches
                   are the perfect companion for any occasion or setting.
                 </p>
@@ -159,7 +159,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
         <div className="catalog row container">
           {watchesCatalog.map((el) => (
             <div className="card catalog__card" key={el.id}>
-              <img src={el.urlWatch} className="catalog__img" />
+              <img src={el.urlWatch} className="catalog__img" alt="img" />
               <h5 className="catalog__title">{el.titleWatch}</h5>
             </div>
           ))}
@@ -179,11 +179,24 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
       </main>
       <footer className="footer" id="Contacts">
         <div className="container">
-          <div className="footer__content">
-            <ul>
-              <li className="footer__guarantee">Guarantee</li>
-              <li>FAQ</li>
-            </ul>
+          {/* <div className="footer__content">
+            <div className="footer__guarantee">Guarantee</div>
+          </div> */}
+          <button type="button" data-modal-open="hello-world">
+            Guarantee
+          </button>
+          <div className="modal" data-modal="hello-world">
+            <div className="dialog">
+              <button
+                type="button"
+                className="dialog-close"
+                aria-label="Close modal"
+              />
+              <section className="dialog-content">
+                <h2>Hello, world</h2>
+                <p>Just modal content</p>
+              </section>
+            </div>
           </div>
           <div className="footer__flex">
             <p className="footer__text">© 2023 Brand All Rights Reserved.</p>
