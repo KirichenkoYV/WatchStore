@@ -95,7 +95,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                 method="POST"
                 className="admin__form"
                 id="changeCarousel"
-                action="/cabinetAdmin"
+                action="/cabinetCarousel"
               >
                 <span className="admin__form-text">Изменить карусель</span>
                 <input
