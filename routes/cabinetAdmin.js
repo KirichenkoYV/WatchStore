@@ -11,7 +11,7 @@ cabinetAdmin.get('/cabinetAdmin', async (req, res) => {
 });
 
 // eslint-disable-next-line consistent-return
-cabinetAdmin.post('/cabinetAdmin', async (req, res) => {
+cabinetAdmin.post('/cabinetCarousel', async (req, res) => {
   const { title, note, imagePath } = req.body;
   try {
     const new1Order = await Watch.create({

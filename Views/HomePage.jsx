@@ -7,7 +7,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
   return (
     <Layout>
       <header className="header">
-        <section className="header__content">
+        <div className="header__content container">
           <div className="header__logo">
             <a href="/" className="header__link">
               <img src="img/logo.png" alt="Logo" className="header__img" />
@@ -39,21 +39,21 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
               </a>
             </li>
           </ul>
-        </section>
+        </div>
       </header>
       <main className="main">
         <div className="brand" id="About">
           <div className="brand__flex">
-            <div className="brand__first">
+            <div className="brand__first container">
               <div className="brand__info">
                 <h2 className="brand__title">Create your own unique design</h2>
                 <p className="brand__text">
                   The watch workshop InTime was founded in 2021. We love it when
                   everything is done on time, so we believe that everyone needs
                   a watch. We focus on detail-oriented design based on
-                  minimalism and precision. Whether it's gold watches, silver
-                  watches or rose gold watches, we produce flawless timepieces
-                  that will enhance your image.
+                  minimalism and precision. Whether it&apos;s gold watches,
+                  silver watches or rose gold watches, we produce flawless
+                  timepieces that will enhance your image.
                 </p>
               </div>
               <img src="img/item.png" alt="item" className="brand__img" />
@@ -67,7 +67,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
               <div className="parallax-img" />
             </div>
             <div />
-            <div className="brand__second">
+            <div className="brand__second container">
               <img
                 src="img/item1.png"
                 alt="woman"
@@ -79,7 +79,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
                 <p className="brand__text">
                   All of our watch faces are designed with timeless material and
                   versatility in mind, and are easy to pair with a variety of
-                  interchangeable straps. Whether you're attending a formal
+                  interchangeable straps. Whether you&apos;re attending a formal
                   event, or enjoying a sunny day at the beach club, our watches
                   are the perfect companion for any occasion or setting.
                 </p>
@@ -87,7 +87,7 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
             </div>
           </div>
         </div>
-        <div className="my-slider" id="Examples">
+        <div className="my-slider container" id="Examples">
           <h2 className="my-slider__title">Sensuality and style</h2>
           <div
             id="carouselExampleDark"
@@ -156,10 +156,10 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
           </div>
           <br />
         </div>
-        <div className="catalog row">
+        <div className="catalog row container">
           {watchesCatalog.map((el) => (
             <div className="card catalog__card" key={el.id}>
-              <img src={el.urlWatch} className="catalog__img" />
+              <img src={el.urlWatch} className="catalog__img" alt="img" />
               <h5 className="catalog__title">{el.titleWatch}</h5>
             </div>
           ))}
@@ -172,15 +172,33 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
           <h2 className="line__title">We work all over the world</h2>
           <div className="line__container">
             <p className="line__words">
-              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
-              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME -
+              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME
             </p>
           </div>
         </div>
       </main>
       <footer className="footer" id="Contacts">
-        <div className="">
-          <div className="">
+        <div className="container">
+          {/* <div className="footer__content">
+            <div className="footer__guarantee">Guarantee</div>
+          </div> */}
+          <button type="button" data-modal-open="hello-world">
+            Guarantee
+          </button>
+          <div className="modal" data-modal="hello-world">
+            <div className="dialog">
+              <button
+                type="button"
+                className="dialog-close"
+                aria-label="Close modal"
+              />
+              <section className="dialog-content">
+                <h2>Hello, world</h2>
+                <p>Just modal content</p>
+              </section>
+            </div>
+          </div>
+          <div className="footer__flex">
             <p className="footer__text">© 2023 Brand All Rights Reserved.</p>
             <div className="footer__social">
               <a href="/" className="footer__item">
