@@ -35,7 +35,7 @@ module.exports = function FormPage() {
             required
           />
           <a href="/">
-            <button type="submit" className="buttonSend">
+            <button type="submit" className="btn">
               SEND
             </button>
           </a>

@@ -2,21 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap');
 @import 'colors';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  cursor: default;
-}
-
-ul {
-  list-style-type: none;
-}
-
 body {
   font-family: 'IBM Plex Mono', monospace;
   cursor: default;
@@ -35,8 +20,6 @@ body {
   height: 60px;
 
   &__content {
-    // max-width: 1300px;
-    // width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 10px 0 10px 0;
@@ -116,12 +99,15 @@ body {
     color: $colorYellow;
     font-size: 20px;
   }
+
+  &__text-admin {
+    color: $colorYellow;
+    font-size: 18px;
+  }
 }
 
 .main {
   margin-top: 65px;
-  // display: flex;
-  // flex-direction: column;
 }
 
 //about us
@@ -130,12 +116,10 @@ body {
   display: flex;
   width: 100%;
   justify-content: center;
-  // height: 100vh;
   padding-top: 55px;
   margin-top: -55px;
   -webkit-background-clip: content-box;
   background-clip: content-box;
-  margin-bottom: 70px;
   //   background-image: url(./img/bgSyper.png);
   //   background-size: contain;
   //   background-repeat: no-repeat;
@@ -152,7 +136,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // max-width: 822px;
   }
 
   &__info:first-child {
@@ -171,8 +154,6 @@ body {
     color: $colorYellow;
     padding-bottom: 20px;
     text-align: center;
-    // -webkit-animation: backgroundZoomAnimate 20s forwards;
-    // animation: backgroundZoomAnimate 20s forwards;
 
     &:hover {
       scale: 1.1;
@@ -208,29 +189,11 @@ body {
   }
 }
 
-// анимация на title
-// @-webkit-keyframes backgroundZoomAnimate {
-//   from {
-//     transform: scale(1);
-//   }
-//   to {
-//     transform: scale(1.3);
-//   }
-// }
-
-// @keyframes backgroundZoomAnimate {
-//   from {
-//     transform: scale(1);
-//   }
-//   to {
-//     transform: scale(1.3);
-//   }
-// }
-
 // parallax
+
 .wrapper {
   height: 70vh;
-  margin: 25px 0 60px 0;
+  margin: 25px 0 30px 0;
 }
 
 .parallax-img {
@@ -256,15 +219,14 @@ body {
 // https://source.unsplash.com/random/1920x1080
 
 //carousel
+
 .carousel {
   display: flex;
   justify-content: center;
 }
 
 .carousel-inner {
-  width: 1240px !important;
   border-radius: 40px;
-  height: 422px;
 }
 
 .my-slider {
@@ -277,25 +239,19 @@ body {
   &__title {
     color: $colorYellow;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   &__style {
-    height: 422px;
+    height: 430px;
   }
 }
 
 // catalog
+
 .catalog {
   display: flex;
   justify-content: center;
-  // &__card {
-  //   max-width: 1300px;
-  //   display: flex;
-  //   justify-content: center;
-  //   flex-wrap: wrap;
-  //   align-items: center;
-  // }
 
   &__card {
     width: 22rem;
@@ -322,37 +278,97 @@ body {
   }
 }
 
+.row {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 //order form
 
 .order {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 60px;
+  margin-top: 60px;
   padding-top: 70px;
   -webkit-background-clip: content-box;
   background-clip: content-box;
 
   &__content {
-    height: 550px;
-    width: 580px;
+    height: 508px;
+    width: 475px;
     border-radius: 40px;
-    border: 1px solid lightgrey;
     display: flex;
     justify-content: center;
+    background-color: $colorDark;
+    background-image: url('./img/bgform.png');
+    background-size: cover;
   }
 
   &__title {
     color: #c6a15a;
+    padding-bottom: 48px;
+    padding-top: 20px;
   }
 
   &__item {
-    width: 50%;
+    width: 70%;
   }
 }
 
-//
+.form-control {
+  border-radius: 40px;
+  margin: 36px 0;
+  padding: 15px;
+
+  &:focus {
+    border-color: $colorYellow;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem $colorYellow;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 14px 49px;
+  margin: 10px 20px;
+  border-radius: 32px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(
+    to right,
+    #ffc107 0%,
+    #724f00 51%,
+    #ffc107 100%
+  );
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+  transition: 0.5s;
+
+  &:hover {
+    background-position: right center;
+    color: #ffffff;
+  }
+
+  // &:focus {
+  //   outline: none;
+  //   box-shadow: 0 0 0 4px #cbd6ee;
+  // }
+
+  &:active {
+    color: white !important;
+    background-color: var(--bs-btn-active-bg);
+    border-color: var(--bs-btn-active-border-color);
+  }
+}
+
+// анимация строки
+
 .line {
   display: flex;
   flex-direction: column;
@@ -378,19 +394,20 @@ body {
     padding: 24px 0;
     color: $colorDark;
     white-space: nowrap;
-    animation: marquee 60s infinite linear;
-    &:after {
-      content: ' LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME';
-    }
+    // animation: marquee 60s infinite linear;
+    // &:after {
+    //   content: ' LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME';
+    // }
+    animation: move 25s linear infinite alternate;
   }
 }
 
-@keyframes marquee {
+@keyframes move {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-40%);
   }
 }
 
@@ -399,6 +416,12 @@ body {
 .footer {
   background-color: $colorDark;
   height: 280px;
+  color: #ffffff;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__text {
     color: #ffffff;
@@ -412,11 +435,11 @@ body {
     border-radius: 2px;
     border: 1px solid transparent;
     background-color: #ffffff;
-    width: 32px;
-    height: 32px;
-    color: $colorDark;
-    font-size: 16px;
-    line-height: 32px;
+    width: 40px;
+    height: 40px;
+    color: #222224;
+    font-size: 20px;
+    line-height: 38px;
     font-weight: 500;
     text-align: center;
     transition: color 1s;
@@ -436,9 +459,235 @@ body {
 // cabinetAdmin
 
 .admin {
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-direction: column;
-  max-width: 1300px;
+  font-size: 14px;
+
+  &__hello {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  &__text {
+    color: #e8a9e6;
+    font-weight: 800;
+    font-size: 25px;
+    -webkit-animation: heartbeat 2s cubic-bezier(0.895, 0.03, 0.685, 0.22)
+      infinite both;
+    animation: heartbeat 2s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite both;
+  }
+
+  &__img {
+    height: 180px;
+  }
+
+  &__table {
+    margin: -70px 15px;
+    padding: 70px 15px;
+  }
+
+  &__title {
+    color: $colorYellow;
+  }
+
+  &__font-size {
+    font-size: 10px;
+  }
+
+  &__delete {
+    border: none;
+    background: white;
+  }
+
+  &__form {
+    width: 500px;
+    text-align: center;
+  }
+
+  &__form-text {
+    font-size: 17px;
+  }
+
+  &__input {
+    margin: 15px;
+    padding: 12px;
+  }
+}
+
+.table {
+  margin-bottom: 30px;
+}
+
+// анимация Hello
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+// модальное окно
+
+.modal {
+  // Подложка будет занимать 100% площади экрана
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  // Скрываем подложку с модальным окном
+  display: none;
+  // Overflow позволит нам скроллить модальное окно, если контента в нём будет больше, чем может поместиться на экране
+  overflow-y: auto;
+  // Цвет подложки
+  background: rgba(0, 0, 0, 0.4);
+  // Размытие фона
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  // Анимация появления
+  animation: fadeIn 250ms ease-in-out;
+  // Добавляем дополнительные стили
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 0 10vh;
+
+  // Через JavaScript мы будем добавлять атрибут open, что должно сделать модальное окно видимым
+  &[open] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dialog {
+    // Стилизуем само модальное окно
+    width: 100%;
+    max-width: 750px;
+    min-height: 200px;
+    border-radius: 4px;
+    position: relative;
+    border: none;
+    color: black;
+    font-weight: 300;
+
+    .dialog-close {
+      // Стилизуем кнопку закрытия модального окна
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 3em;
+      height: 3em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        left: 5px;
+        border-bottom: 1px solid white;
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+      &:focus,
+      &:hover {
+        &::before,
+        &::after {
+          border-color: tomato;
+        }
+      }
+    }
+    .dialog-content {
+      // Дополнительные стили для контента
+      padding: 2em;
+      background-color: white;
+      border: none;
+    }
+  }
+}
+
+// Анимация появления
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
