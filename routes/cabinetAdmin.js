@@ -1,6 +1,7 @@
 const cabinetAdmin = require('express').Router();
 const { Order, Watch, Catalog } = require('../db/models');
 const CabinetAdmin = require('../Views/CabinetAdmin');
+const CarouselAdmin = require('../Views/CarouselAdmin');
 
 cabinetAdmin.get('/cabinetAdmin', async (req, res) => {
   const orders = await Order.findAll();
@@ -18,8 +19,8 @@ cabinetAdmin.post('/cabinetCarousel', async (req, res) => {
       note,
       imagePath,
     });
-    new1Order.save();
-    res.redirect('/cabinetAdmin');
+    const table = await Watch.findAll();
+    res.renderComponent(CarouselAdmin, { el: new1Order, i: table.length - 1 });
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error(error.message);
@@ -27,7 +28,7 @@ cabinetAdmin.post('/cabinetCarousel', async (req, res) => {
   }
 });
 
-cabinetAdmin.post('/cabinetAdmin', async (req, res) => {
+cabinetAdmin.post('/cabinet', async (req, res) => {
   const { titleWatch, urlWatch } = req.body;
   try {
     const new1Order = await Catalog.create({

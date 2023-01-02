@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 const React = require('react');
 const Layout = require('./Layout');
+const CarouselAdmin = require('./CarouselAdmin');
 
 module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
   return (
@@ -71,8 +72,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
               </tbody>
             </table>
           </div>
-
-          <div className="admin__table" id="changeCarousel">
+          <div className="admin__table">
             <h2 className="admin__title">Таблица изменения карусели:</h2>
             <table className="table">
               <thead>
@@ -84,21 +84,9 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                   <th scope="col"> </th>
                 </tr>
               </thead>
-              <tbody>
-                {carousel.map((el, i) => (
-                  <tr key={el.id}>
-                    <th scope="row">{i + 1}</th>
-                    <td>{el.dataValues.title}</td>
-                    <td>{el.dataValues.note}</td>
-                    <td className="admin__font-size">
-                      {el.dataValues.imagePath}
-                    </td>
-                    <td>
-                      <button type="button" className="admin__delete">
-                        <img src="img/x.svg" alt="delete" />
-                      </button>
-                    </td>
-                  </tr>
+              <tbody className="tableCarousel">
+                {carousel.map((el, i = 0) => (
+                  <CarouselAdmin el={el} i={i} />
                 ))}
               </tbody>
             </table>
@@ -106,7 +94,8 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
               <form
                 method="POST"
                 className="admin__form"
-                action="cabinetCarousel"
+                id="changeCarousel"
+                action="/cabinetCarousel"
               >
                 <span className="admin__form-text">Изменить карусель</span>
                 <input
@@ -124,7 +113,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                   required
                 />
                 <input
-                  className="phoneClient form-control admin__input"
+                  className="phoneClient form-control admin-input"
                   type="text"
                   placeholder="URL картинки"
                   name="imagePath"
