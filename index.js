@@ -3,7 +3,9 @@ require('dotenv').config();
 require('@babel/register');
 
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
+const FileStore = require('session-file-store')(session); // хранилище для куков сессии
 const db = require('./db/models');
 const indexRouter = require('./routes/index');
 const regAdmin = require('./routes/regAdmin');
@@ -14,12 +16,25 @@ const getform = require('./routes/getformsRouter');
 const staticDir = path.join(__dirname, 'public');
 // раздать статические файлы — изображения, стили, клиентские скрипты, etc.
 
+const sessionConfig = {
+  store: new FileStore(),
+  name: 'admin_sid', // Имя куки для хранения id сессии. По умолчанию - connect.sid
+  secret: process.env.SESSION_SECRET ?? 'test', // Секретное слово для шифрования, может быть любым
+  resave: false, // Пересохранять ли куку при каждом запросе
+  saveUninitialized: false, // Создавать ли сессию без инициализации ключей в req.session
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 12, // Срок истечения годности куки в миллисекундах
+    httpOnly: true, // Серверная установка и удаление куки, по умолчанию true
+  },
+};
+
 const app = express();
 const PORT = 3000;
 config(app);
 
 // обработчики запросов
 app.use(express.static(staticDir));
+app.use(session(sessionConfig));
 app.use('/', indexRouter);
 app.use('/admin', regAdmin);
 app.use('/', getform);
