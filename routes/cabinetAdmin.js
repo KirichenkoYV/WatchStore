@@ -1,3 +1,6 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line consistent-return
 const cabinetAdmin = require('express').Router();
 const { Order, Watch, Catalog } = require('../db/models');
 const CabinetAdmin = require('../Views/CabinetAdmin');
@@ -12,12 +15,12 @@ cabinetAdmin.get('/cabinetAdmin', async (req, res) => {
   if (req.session.userId) {
     res.renderComponent(CabinetAdmin, { orders, carousel, catalog });
   } else {
-    res.status(400)
+    res
+      .status(400)
       .json({ error: 'необходимо зарегистрироваться как администратор' });
   }
 });
 
-// eslint-disable-next-line consistent-return
 cabinetAdmin.post('/cabinetCarousel', async (req, res) => {
   const { title, note, imagePath } = req.body;
   try {
@@ -59,7 +62,6 @@ cabinetAdmin.post('/cabinet', async (req, res) => {
   }
 });
 
-
 cabinetAdmin.delete('/cabinetAdmin/:id', async (req, res) => {
   const { id } = req.params;
   const deleteWatch = await Watch.destroy({ where: { id } });
@@ -72,6 +74,7 @@ cabinetAdmin.delete('/cabinet/:id', async (req, res) => {
   const deleteCatalog = await Catalog.destroy({ where: { id } });
 
   res.json({ delete: true });
+});
 
 cabinetAdmin.get('/cabinetAdmin/logout', (req, res) => {
   req.session.destroy((error) => {
@@ -82,7 +85,6 @@ cabinetAdmin.get('/cabinetAdmin/logout', (req, res) => {
     // json({ message: 'Успешный выход' });
     res.redirect('/');
   });
-
 });
 
 module.exports = cabinetAdmin;

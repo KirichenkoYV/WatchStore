@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const Registration = require('../Views/Registration');
@@ -40,7 +41,8 @@ router.post('/', async (req, res) => {
   const dataBasePassword = user.password; // хэшированный пароль, ранее внесенный в БД
   let isSame;
   try {
-    isSame = await bcrypt.compare(rawPassword, dataBasePassword); // проверка бикриптом сырого пароля и пароля из базы данных
+    // проверка бикриптом сырого пароля и пароля из базы данных
+    isSame = await bcrypt.compare(rawPassword, dataBasePassword);
   } catch (error) {
     console.log(error.message);
   }
