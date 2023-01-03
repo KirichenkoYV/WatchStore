@@ -8,7 +8,13 @@ cabinetAdmin.get('/cabinetAdmin', async (req, res) => {
   const orders = await Order.findAll();
   const carousel = await Watch.findAll();
   const catalog = await Catalog.findAll();
-  res.renderComponent(CabinetAdmin, { orders, carousel, catalog });
+
+  if (req.session.userId) {
+    res.renderComponent(CabinetAdmin, { orders, carousel, catalog });
+  } else {
+    res.status(400)
+      .json({ error: 'необходимо зарегистрироваться как администратор' });
+  }
 });
 
 // eslint-disable-next-line consistent-return
@@ -53,6 +59,7 @@ cabinetAdmin.post('/cabinet', async (req, res) => {
   }
 });
 
+
 cabinetAdmin.delete('/cabinetAdmin/:id', async (req, res) => {
   const { id } = req.params;
   const deleteWatch = await Watch.destroy({ where: { id } });
@@ -65,6 +72,17 @@ cabinetAdmin.delete('/cabinet/:id', async (req, res) => {
   const deleteCatalog = await Catalog.destroy({ where: { id } });
 
   res.json({ delete: true });
+
+cabinetAdmin.get('/cabinetAdmin/logout', (req, res) => {
+  req.session.destroy((error) => {
+    if (error) {
+      return res.status(500).json({ message: 'Ошибка при удалении сессии' });
+    }
+    res.clearCookie('admin_sid');
+    // json({ message: 'Успешный выход' });
+    res.redirect('/');
+  });
+
 });
 
 module.exports = cabinetAdmin;

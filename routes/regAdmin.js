@@ -51,7 +51,7 @@ router.post('/', async (req, res) => {
       .json({ error: 'Нет пользователя с таким логином или паролем' });
     return;
   }
-
+  req.session.userId = user.id;
   res.redirect('/cabinetAdmin');
 });
 
