@@ -7,7 +7,13 @@ cabinetAdmin.get('/cabinetAdmin', async (req, res) => {
   const orders = await Order.findAll();
   const carousel = await Watch.findAll();
   const catalog = await Catalog.findAll();
-  res.renderComponent(CabinetAdmin, { orders, carousel, catalog });
+
+  if (req.session.userId) {
+    res.renderComponent(CabinetAdmin, { orders, carousel, catalog });
+  } else {
+    res.status(400)
+      .json({ error: 'необходимо зарегистрироваться как администратор' });
+  }
 });
 
 // eslint-disable-next-line consistent-return
