@@ -50,4 +50,15 @@ cabinetAdmin.post('/cabinet', async (req, res) => {
   }
 });
 
+cabinetAdmin.get('/cabinetAdmin/logout', (req, res) => {
+  req.session.destroy((error) => {
+    if (error) {
+      return res.status(500).json({ message: 'Ошибка при удалении сессии' });
+    }
+    res.clearCookie('admin_sid');
+    // json({ message: 'Успешный выход' });
+    res.redirect('/');
+  });
+});
+
 module.exports = cabinetAdmin;
