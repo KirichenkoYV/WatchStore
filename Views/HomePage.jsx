@@ -179,25 +179,6 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
       </main>
       <footer className="footer" id="Contacts">
         <div className="container">
-          {/* <div className="footer__content">
-            <div className="footer__guarantee">Guarantee</div>
-          </div> */}
-          <button type="button" data-modal-open="hello-world">
-            Guarantee
-          </button>
-          <div className="modal" data-modal="hello-world">
-            <div className="dialog">
-              <button
-                type="button"
-                className="dialog-close"
-                aria-label="Close modal"
-              />
-              <section className="dialog-content">
-                <h2>Hello, world</h2>
-                <p>Just modal content</p>
-              </section>
-            </div>
-          </div>
           <div className="footer__flex">
             <p className="footer__text">© 2023 Brand All Rights Reserved.</p>
             <div className="footer__social">

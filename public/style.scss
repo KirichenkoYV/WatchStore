@@ -515,7 +515,7 @@ body {
     padding: 12px;
   }
 
-  &__rega{
+  &__rega {
     margin-top: 70px;
   }
 }
@@ -598,101 +598,23 @@ body {
 
 // модальное окно
 
-.modal {
-  // Подложка будет занимать 100% площади экрана
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
-  // Скрываем подложку с модальным окном
-  display: none;
-  // Overflow позволит нам скроллить модальное окно, если контента в нём будет больше, чем может поместиться на экране
-  overflow-y: auto;
-  // Цвет подложки
-  background: rgba(0, 0, 0, 0.4);
-  // Размытие фона
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  // Анимация появления
-  animation: fadeIn 250ms ease-in-out;
-  // Добавляем дополнительные стили
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 0 10vh;
+// .pop-up {
+//   left: 0;
+//   position: fixed;
+//   height: 100vh;
+//   width: 100vw;
+//   background-color: rgba(0, 0, 0, 0.4);
+//   z-index: 100;
+//   top: 0;
+//   text-align: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 
-  // Через JavaScript мы будем добавлять атрибут open, что должно сделать модальное окно видимым
-  &[open] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .dialog {
-    // Стилизуем само модальное окно
-    width: 100%;
-    max-width: 750px;
-    min-height: 200px;
-    border-radius: 4px;
-    position: relative;
-    border: none;
-    color: black;
-    font-weight: 300;
-
-    .dialog-close {
-      // Стилизуем кнопку закрытия модального окна
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 3em;
-      height: 3em;
-      background: none;
-      border: none;
-      cursor: pointer;
-      outline: none;
-
-      &::before,
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 5px;
-        left: 5px;
-        border-bottom: 1px solid white;
-        transform: rotate(45deg);
-      }
-      &::after {
-        transform: rotate(-45deg);
-      }
-
-      &:focus,
-      &:hover {
-        &::before,
-        &::after {
-          border-color: tomato;
-        }
-      }
-    }
-    .dialog-content {
-      // Дополнительные стили для контента
-      padding: 2em;
-      background-color: white;
-      border: none;
-    }
-  }
-}
-
-// Анимация появления
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+//   &__content {
+//     background-color: #ffffff;
+//     border-radius: 40px;
+//     height: 50%;
+//     width: 50%;
+//   }
+// }
