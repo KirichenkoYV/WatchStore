@@ -2,6 +2,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 const CarouselAdmin = require('./CarouselAdmin');
+const CatalogAdmin = require('./CatalogAdmin');
 
 module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
   return (
@@ -136,23 +137,19 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                   <th scope="col"> </th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="tableCatalog">
                 {catalog.map((el, i) => (
-                  <tr key={el.id}>
-                    <th scope="row">{i + 1}</th>
-                    <td>{el.dataValues.titleWatch}</td>
-                    <td>{el.dataValues.urlWatch}</td>
-                    <td>
-                      <button type="button" className="admin__delete">
-                        <img src="img/x.svg" alt="delete" />
-                      </button>
-                    </td>
-                  </tr>
+                  <CatalogAdmin el={el} i={i} />
                 ))}
               </tbody>
             </table>
             <div className="" id="Order1">
-              <form method="POST" className="admin__form">
+              <form
+                method="POST"
+                className="admin__form"
+                action="/cabinet"
+                id="changeCatolog"
+              >
                 <span className="admin__form-text">Изменить каталог</span>
                 <input
                   className="nameClient form-control admin__input"
