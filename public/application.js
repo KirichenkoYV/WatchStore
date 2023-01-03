@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 const changeCarousel = document.querySelector('#changeCarousel');
 const tableCarousel = document.querySelector('.tableCarousel');
 changeCarousel.addEventListener('submit', async (event) => {

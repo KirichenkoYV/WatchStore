@@ -1,5 +1,5 @@
+/* eslint-disable object-curly-newline */
 const getform = require('express').Router();
-// const { Order } = require('../db/models');
 const db = require('../db/models');
 const newOrder = require('../Views/AddOrder');
 const mailer = require('../nodemailer');
