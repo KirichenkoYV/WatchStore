@@ -34,6 +34,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
   }
 
   &__img {
@@ -398,7 +399,7 @@ body {
     // &:after {
     //   content: ' LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME';
     // }
-    animation: move 25s linear infinite alternate;
+    animation: move 30s linear infinite alternate;
   }
 }
 
@@ -415,19 +416,34 @@ body {
 
 .footer {
   background-color: $colorDark;
-  height: 280px;
+  height: 200px;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    > span {
+      margin: 15px;
+    }
   }
 
   &__text {
     color: #ffffff;
     font-size: 16px;
     line-height: 19px;
-    padding: 30px 0;
+  }
+
+  &__social {
+    margin: 15px;
   }
 
   &__item {
@@ -444,6 +460,7 @@ body {
     text-align: center;
     transition: color 1s;
     transition: background-color 1s;
+    cursor: pointer;
 
     &:not(:last-child) {
       margin: 0 8px 0 0;
@@ -517,6 +534,27 @@ body {
 
   &__rega {
     margin-top: 70px;
+    width: 50%;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+
+    &-color {
+      background-image: linear-gradient(
+        to right,
+        #5b585b 0%,
+        #1f1e1f 51%,
+        #999497 100%
+      );
+    }
+  }
+
+  &__login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -598,23 +636,43 @@ body {
 
 // модальное окно
 
-// .pop-up {
-//   left: 0;
-//   position: fixed;
-//   height: 100vh;
-//   width: 100vw;
-//   background-color: rgba(0, 0, 0, 0.4);
-//   z-index: 100;
-//   top: 0;
-//   text-align: center;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+.pop-up {
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  top: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: none;
 
-//   &__content {
-//     background-color: #ffffff;
-//     border-radius: 40px;
-//     height: 50%;
-//     width: 50%;
-//   }
-// }
+  &__content {
+    background-color: #ffffff;
+    border-radius: 40px;
+    height: 50%;
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  &__close {
+    grid-area: 1 / 5 / 2 / 6;
+    font-size: 35px;
+    font-weight: 400;
+    cursor: pointer;
+    color: $colorDark;
+  }
+
+  &__text {
+    grid-area: 3 / 1 / 4 / 6;
+    color: $colorYellow;
+    font-size: 35px;
+    font-weight: 500;
+  }
+}

@@ -172,15 +172,42 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
           <h2 className="line__title">We work all over the world</h2>
           <div className="line__container">
             <p className="line__words">
-              LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME
+              LONDON - PARIS - BEIJING - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME - MOSСOW
             </p>
           </div>
         </div>
       </main>
       <footer className="footer" id="Contacts">
-        <div className="container">
+        <div className="container footer__content">
           <div className="footer__flex">
-            <p className="footer__text">© 2023 Brand All Rights Reserved.</p>
+            <span>
+              Complaints and suggestions
+              {' '}
+              <br />
+              {' '}
+              offer@inTime.ru
+            </span>
+            <span>
+              Order or consultation question@inTime.ru
+              {' '}
+              <br />
+              {' '}
+              8(900) 777-45-33
+              daily from 10.00 to 21.00
+            </span>
+            <span>
+              Legal address 171793, Moscow region,
+              {' '}
+              <br />
+              {' '}
+              Dubna, st. Tayson, d.
+              9, apt. 32
+            </span>
+          </div>
+          <div className="footer__flex">
+            <span className="footer__text">
+              © 2023 Brand All Rights Reserved.
+            </span>
             <div className="footer__social">
               <a href="/" className="footer__item">
                 <i className="footer__icon fa-brands fa-facebook-f" />
