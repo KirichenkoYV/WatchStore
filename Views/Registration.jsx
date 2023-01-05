@@ -14,33 +14,33 @@ function RegistrationPage() {
           </div>
         </div>
       </header>
-      <form className="container admin__rega" method="POST" action="/admin">
-        <label htmlFor="loginInput">Username</label>
-        <input
-          className="form-control mb-2 bg-light"
-          name="login"
-          id="loginInput"
-          type="text"
-          required
-        />
-
-        <label htmlFor="passwordInput">Password</label>
-        <input
-          className="form-control mb-2 bg-light"
-          name="password"
-          id="passwordInput"
-          type="password"
-          required
-        />
-
-        <button
-          id="knopka"
-          className="btn btn-default btn-m bg-info"
-          type="submit"
-        >
-          SING IN
-        </button>
-      </form>
+      <div className="admin__login">
+        <form className="container admin__rega" method="POST" action="/admin">
+          <span>Username</span>
+          <input
+            className="form-control mb-2 bg-light"
+            name="login"
+            id="loginInput"
+            type="text"
+            required
+          />
+          <span>Password</span>
+          <input
+            className="form-control mb-2 bg-light"
+            name="password"
+            id="passwordInput"
+            type="password"
+            required
+          />
+          <button
+            id="knopka"
+            className="btn btn-default btn-m bg-info"
+            type="submit"
+          >
+            SING IN
+          </button>
+        </form>
+      </div>
     </Layout>
   );
 }

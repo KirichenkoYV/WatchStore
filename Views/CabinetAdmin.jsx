@@ -23,7 +23,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
             </li>
 
             <li className="nav__item">
-              <a href="#changeCarousel" className="nav__link">
+              <a href="#carouselTable" className="nav__link">
                 <span className="nav__text-admin">Таблица карусели</span>
               </a>
             </li>
@@ -73,7 +73,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
               </tbody>
             </table>
           </div>
-          <div className="admin__table">
+          <div className="admin__table" id="carouselTable">
             <h2 className="admin__title">Таблица изменения карусели:</h2>
             <table className="table">
               <thead>
@@ -114,7 +114,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                   required
                 />
                 <input
-                  className="phoneClient form-control admin-input"
+                  className="phoneClient form-control admin__input"
                   type="text"
                   placeholder="URL картинки"
                   name="imagePath"
@@ -169,16 +169,13 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                   Добавить
                 </button>
               </form>
-
-              {/* Маш, стилизуй пожалуйста эту кнопку ниже */}
-
-              <a href="/cabinetAdmin/logout">
-                <button type="submit" className="btn">
-                  Log out
-                </button>
-              </a>
             </div>
           </div>
+          <a href="/cabinetAdmin/logout" className="admin__btn">
+            <button type="submit" className="btn admin__btn-color">
+              Log out
+            </button>
+          </a>
         </div>
       </div>
     </Layout>

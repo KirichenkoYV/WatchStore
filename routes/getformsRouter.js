@@ -4,9 +4,9 @@ const db = require('../db/models');
 const newOrder = require('../Views/AddOrder');
 const mailer = require('../nodemailer');
 
-getform.get('/neworder', (req, res) => {
-  res.renderComponent(newOrder);
-});
+// getform.get('/neworder', (req, res) => {
+//   res.renderComponent(newOrder);
+// });
 
 getform.post('/neworder', async (req, res) => {
   //   const { name } = req.body;
@@ -26,9 +26,10 @@ getform.post('/neworder', async (req, res) => {
     };
     mailer(message);
     res.locals.user = new1Order;
-    res.redirect('/neworder');
+    // res.redirect('/neworder');
+    res.end();
+    // res.renderComponent();
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error(error.message);
     res.sendStatus(500);
   }
