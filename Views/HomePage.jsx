@@ -209,16 +209,16 @@ module.exports = function HomePage({ watches, watchesCatalog }) {
               © 2023 Brand All Rights Reserved.
             </span>
             <div className="footer__social">
-              <a href="/" className="footer__item">
+              <a href="https://www.facebook.com/" className="footer__item">
                 <i className="footer__icon fa-brands fa-facebook-f" />
               </a>
-              <a href="/" className="footer__item">
+              <a href="https://www.instagram.com/" className="footer__item">
                 <i className="footer__icon fa-brands fa-instagram" />
               </a>
-              <a href="/" className="footer__item">
+              <a href="https://www.pinterest.com/" className="footer__item">
                 <i className="footer__icon fa-brands fa-pinterest-p" />
               </a>
-              <a href="/" className="footer__item">
+              <a href="https://twitter.com/" className="footer__item">
                 <i className="footer__icon fa-brands fa-twitter" />
               </a>
             </div>
