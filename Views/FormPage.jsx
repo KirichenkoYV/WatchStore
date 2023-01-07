@@ -7,12 +7,7 @@ module.exports = function FormPage() {
       <div className="order" id="Order">
         <h1 className="order__title">Create an order for a unique watch</h1>
         <div className="order__content">
-          <form
-            method="POST"
-            action="/neworder"
-            className="order__item"
-            id="btnSend"
-          >
+          <form method="POST" action="/neworder" className="order__item">
             <input
               className="nameClient form-control"
               type="text"

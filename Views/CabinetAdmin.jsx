@@ -169,13 +169,16 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                   Добавить
                 </button>
               </form>
+
+              {/* Маш, стилизуй пожалуйста эту кнопку ниже */}
+
+              <a href="/cabinetAdmin/logout">
+                <button type="submit" className="btn">
+                  Log out
+                </button>
+              </a>
             </div>
           </div>
-          <a href="/cabinetAdmin/logout" className="admin__btn">
-            <button type="submit" className="btn admin__btn-color">
-              Log out
-            </button>
-          </a>
         </div>
       </div>
     </Layout>
