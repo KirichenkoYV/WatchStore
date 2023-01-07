@@ -148,10 +148,6 @@ body {
     background-image: url(./img/item2.png);
     background-size: 455px;
     background-repeat: no-repeat;
-
-    @media screen and (max-width: 576px) {
-      display: none;
-    }
   }
 
   &__title {
@@ -174,10 +170,6 @@ body {
     position: absolute;
     height: 359px;
     right: -9px;
-
-    @media screen and (max-width: 576px) {
-      display: none;
-    }
   }
 
   &__img-woman {
@@ -187,10 +179,6 @@ body {
     background-image: url(./img/bg.png);
     background-size: 455px;
     background-repeat: no-repeat;
-
-    @media screen and (max-width: 576px) {
-      display: none;
-    }
   }
 
   &__img-detail {
@@ -198,10 +186,6 @@ body {
     position: absolute;
     left: 18px;
     top: 207px;
-
-    @media screen and (max-width: 576px) {
-      display: none;
-    }
   }
 }
 
@@ -260,22 +244,6 @@ body {
 
   &__style {
     height: 430px;
-
-    @media screen and (max-width: 1200px) {
-      height: 380px;
-    }
-
-    @media screen and (max-width: 992px) {
-      height: 300px;
-    }
-
-    @media screen and (max-width: 768px) {
-      height: 280px;
-    }
-
-    @media screen and (max-width: 576px) {
-      height: 200px;
-    }
   }
 }
 
@@ -323,7 +291,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  // margin-top: 60px;
+  margin-top: 60px;
   padding-top: 70px;
   -webkit-background-clip: content-box;
   background-clip: content-box;
@@ -352,7 +320,7 @@ body {
 
 .form-control {
   border-radius: 40px;
-  margin: 30px 0;
+  margin: 36px 0;
   padding: 15px;
 
   &:focus {
@@ -453,7 +421,7 @@ body {
   &__flex {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    align-items: center;
 
     > span {
       margin: 15px;
@@ -462,6 +430,7 @@ body {
 
   &__text {
     color: #ffffff;
+    font-size: 16px;
     line-height: 19px;
     padding: 30px 0;
   }
@@ -553,7 +522,7 @@ body {
 
   &__rega {
     margin-top: 70px;
-    width: 35%;
+    width: 50%;
   }
 
   &__btn {
@@ -561,7 +530,6 @@ body {
     justify-content: center;
 
     &-color {
-      padding: 11px 31px;
       background-image: linear-gradient(
         to right,
         #5b585b 0%,
@@ -694,123 +662,5 @@ body {
     color: $colorYellow;
     font-size: 35px;
     font-weight: 500;
-  }
-}
-
-// some adaptive
-
-@media screen and (max-width: 992px) {
-  .header__logo {
-    padding-right: 30px;
-  }
-
-  .header__img {
-    width: 27px;
-    height: 24px;
-    margin-right: 5px;
-  }
-
-  .header__text {
-    font-size: 20px;
-    letter-spacing: 3px;
-  }
-
-  .nav__text {
-    font-size: 16px;
-  }
-
-  .brand {
-    &__img {
-      height: 400px;
-      background-image: none;
-
-      &-watch {
-        top: 214px;
-        height: 248px;
-      }
-
-      &-woman {
-        height: 372px;
-        background: none;
-      }
-
-      &-detail {
-        height: 270px;
-        top: 140px;
-      }
-    }
-
-    &__title {
-      padding-bottom: 16px;
-    }
-
-    &__text {
-      font-size: 16px;
-    }
-  }
-
-  .catalog__card {
-    width: 14rem;
-  }
-
-  .catalog__img {
-    height: 297px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .brand {
-    &__first {
-      margin-top: 40px;
-    }
-
-    &__img {
-      height: 330px;
-      background-image: none;
-
-      &-watch {
-        top: 175px;
-        height: 204px;
-      }
-
-      &-woman {
-        height: 300px;
-      }
-
-      &-detail {
-        height: 216px;
-        top: 115px;
-      }
-    }
-  }
-
-  .wrapper {
-    height: 60vh;
-  }
-
-  .footer__flex {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .brand__info:first-child {
-    margin-right: 0;
-  }
-
-  .brand__second {
-    margin-bottom: 40px;
-  }
-
-  h5 {
-    font-size: 1rem;
-  }
-
-  .catalog__img {
-    height: 250px;
-  }
-
-  .order__title {
-    padding-bottom: 0;
   }
 }
