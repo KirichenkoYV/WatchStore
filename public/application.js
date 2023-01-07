@@ -62,3 +62,37 @@ admin.addEventListener('click', async (event) => {
     }
   }
 });
+
+const checkButtons = document.querySelectorAll('.check-btn');
+checkButtons.forEach((elem) => {
+  elem.addEventListener('click', async (event) => {
+    const response = await fetch('/change-status', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'Application/json' },
+      body: JSON.stringify({
+        id: elem.dataset.check,
+        status: 'Выполнено',
+      }),
+    });
+    if (response.status === 200) {
+      window.location.assign('/cabinetAdmin');
+    }
+  });
+});
+
+const unCheckButtons = document.querySelectorAll('.un-check-btn');
+unCheckButtons.forEach((elem) => {
+  elem.addEventListener('click', async (event) => {
+    const response = await fetch('/change-status', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'Application/json' },
+      body: JSON.stringify({
+        id: elem.dataset.check,
+        status: 'Не выполнено',
+      }),
+    });
+    if (response.status === 200) {
+      window.location.assign('/cabinetAdmin');
+    }
+  });
+});

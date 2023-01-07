@@ -5,6 +5,7 @@ const CarouselAdmin = require('./CarouselAdmin');
 const CatalogAdmin = require('./CatalogAdmin');
 
 module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
+  orders = orders.sort((a, b) => a.id - b.id);
   return (
     <Layout>
       <header className="header">
@@ -54,6 +55,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                   <th scope="col">Ссылка на часы</th>
                   <th scope="col">Дата оформления заказа</th>
                   <th scope="col">Cтатус заказа</th>
+                  <th scope="col">Изменить статус заказа</th>
                 </tr>
               </thead>
               <tbody>
@@ -68,6 +70,15 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                       {new Date(el.dataValues.createdAt).toLocaleString()}
                     </td>
                     <td>{el.dataValues.status}</td>
+                    {el.dataValues.status === 'Не выполнено' ? (
+                      <td data-check={el.id} className="check-btn">
+                        ☑️
+                      </td>
+                    ) : (
+                      <td data-check={el.id} className="un-check-btn">
+                        ✅
+                      </td>
+                    )}
                   </tr>
                 ))}
               </tbody>

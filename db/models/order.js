@@ -31,6 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     status: {
       allowNull: true,
       type: DataTypes.TEXT,
+      defaultValue: 'Не выполнено',
     },
     createdAt: {
       allowNull: false,
