@@ -18,7 +18,7 @@ function RegistrationPage() {
         <form className="container admin__rega" method="POST" action="/admin">
           <span>Username</span>
           <input
-            className="form-control mb-2 bg-light"
+            className="form-control bg-light"
             name="login"
             id="loginInput"
             type="text"
@@ -26,19 +26,17 @@ function RegistrationPage() {
           />
           <span>Password</span>
           <input
-            className="form-control mb-2 bg-light"
+            className="form-control bg-light"
             name="password"
             id="passwordInput"
             type="password"
             required
           />
-          <button
-            id="knopka"
-            className="btn btn-default btn-m bg-info"
-            type="submit"
-          >
-            SING IN
-          </button>
+          <div className="admin__btn">
+            <button className="btn admin__btn-color" type="submit">
+              SING IN
+            </button>
+          </div>
         </form>
       </div>
     </Layout>
