@@ -240,6 +240,10 @@ body {
 .carousel {
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 }
 
 .carousel-inner {
@@ -272,10 +276,6 @@ body {
 
     @media screen and (max-width: 768px) {
       height: 280px;
-    }
-
-    @media screen and (max-width: 576px) {
-      height: 200px;
     }
   }
 }
@@ -410,6 +410,7 @@ body {
 
   &__title {
     color: $colorYellow;
+    text-align: center;
     -webkit-animation: backgroundZoomAnimate 20s forwards;
     animation: backgroundZoomAnimate 20s forwards;
   }
@@ -596,7 +597,6 @@ body {
 
 .check-btn,
 .un-check-btn {
-  text-align: center;
   font-size: 17px;
 }
 
@@ -802,6 +802,10 @@ body {
     }
   }
 
+  .header__logo {
+    padding-right: 17px;
+  }
+
   .wrapper {
     height: 60vh;
   }
@@ -812,6 +816,14 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+  .nav__text {
+    font-size: 12px;
+  }
+
+  .wrapper {
+    height: 45vh;
+  }
+
   .brand__info:first-child {
     margin-right: 0;
   }
@@ -824,11 +836,89 @@ body {
     font-size: 1rem;
   }
 
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .my-slider__title {
+    padding-bottom: 0;
+  }
+
+  .my-slider {
+    margin-bottom: 0;
+  }
+
+  .catalog__card {
+    width: 10rem;
+  }
+
   .catalog__img {
-    height: 250px;
+    height: 193px;
+  }
+
+  .order {
+    height: 78vh;
   }
 
   .order__title {
     padding-bottom: 0;
+  }
+
+  .order__content {
+    height: 479px;
+    width: 345px;
+  }
+
+  .line__words {
+    font-size: 30px;
+  }
+
+  .footer__flex {
+    font-size: 10px;
+  }
+
+  .footer__social {
+    margin: 0;
+  }
+
+  .footer__item {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .header__img {
+    width: 22px;
+    height: 17px;
+  }
+
+  .header__text {
+    font-size: 11px;
+  }
+
+  .catalog__card {
+    width: 8rem;
+  }
+
+  .catalog__img {
+    height: 150px;
+  }
+
+  .order {
+    height: 100vh;
+  }
+
+  .footer__flex > span {
+    margin: 9px;
+  }
+
+  .footer__item {
+    width: 22px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
