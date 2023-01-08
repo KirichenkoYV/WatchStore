@@ -594,6 +594,12 @@ body {
   margin-bottom: 30px;
 }
 
+.check-btn,
+.un-check-btn {
+  text-align: center;
+  font-size: 17px;
+}
+
 // анимация Hello
 
 @-webkit-keyframes heartbeat {

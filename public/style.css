@@ -496,6 +496,12 @@ body {
   margin-bottom: 30px;
 }
 
+.check-btn,
+.un-check-btn {
+  text-align: center;
+  font-size: 17px;
+}
+
 @-webkit-keyframes heartbeat {
   from {
     transform: scale(1);
