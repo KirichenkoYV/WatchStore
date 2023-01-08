@@ -12,6 +12,7 @@ const regAdmin = require('./routes/regAdmin');
 const cabinet = require('./routes/cabinetAdmin');
 const config = require('./config/config');
 const getform = require('./routes/getformsRouter');
+const changeStatusRouter = require('./routes/changeStatus');
 // абсолютный путь до папки со статическими файлами
 const staticDir = path.join(__dirname, 'public');
 // раздать статические файлы — изображения, стили, клиентские скрипты, etc.
@@ -39,6 +40,7 @@ app.use('/', indexRouter);
 app.use('/admin', regAdmin);
 app.use('/', getform);
 app.use('/', cabinet);
+app.use('/change-status', changeStatusRouter);
 
 // слушатель порта
 app
