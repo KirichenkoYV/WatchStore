@@ -50,12 +50,12 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Имя клиента</th>
-                  <th scope="col">Номер телефона</th>
                   <th scope="col">Почта</th>
+                  <th scope="col">Номер телефона</th>
                   <th scope="col">Ссылка на часы</th>
                   <th scope="col">Дата оформления заказа</th>
                   <th scope="col">Cтатус заказа</th>
-                  <th scope="col">Изменить статус заказа</th>
+                  {/* <th scope="col">Изменить статус заказа</th> */}
                 </tr>
               </thead>
               <tbody>
@@ -65,7 +65,7 @@ module.exports = function CabinetAdmin({ orders, carousel, catalog }) {
                     <td>{el.dataValues.name}</td>
                     <td>{el.dataValues.email}</td>
                     <td>{el.dataValues.phone}</td>
-                    <td>{el.dataValues.url}</td>
+                    <td className="admin__font-size">{el.dataValues.url}</td>
                     <td>
                       {new Date(el.dataValues.createdAt).toLocaleString()}
                     </td>

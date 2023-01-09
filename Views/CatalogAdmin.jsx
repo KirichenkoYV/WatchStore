@@ -6,7 +6,7 @@ module.exports = function CatologAdmin({ el, i }) {
     <tr key={el.id} id={`card-${el.id}`}>
       <th scope="row">{i + 1}</th>
       <td>{el.dataValues.titleWatch}</td>
-      <td>{el.dataValues.urlWatch}</td>
+      <td className="admin__font-size">{el.dataValues.urlWatch}</td>
       <td>
         <button type="button" className="admin__delete">
           <img
